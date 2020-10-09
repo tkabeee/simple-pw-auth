@@ -23,7 +23,7 @@
 
   /**
    * WebStorageからアイテムを取得
-   * @return {Boolean}
+   * @return {String}
    */
   function fetch() {
     return atob(localStorage.getItem(STORAGE_KEY));
