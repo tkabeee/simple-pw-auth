@@ -7,7 +7,7 @@
 */
 (function() {
   'use strict';
-  STORAGE_KEY = 'secret_token';
+  const STORAGE_KEY = 'secret_token';
   const token = atob(document.querySelector('script[data-id="AnyID"][data-token]').getAttribute('data-token'));
 
   console.log(token);
