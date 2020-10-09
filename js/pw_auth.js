@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  const STORAGE_KEY = 'secret_token';
+  const storageKey = `secret_token_${location.pathname.replace('/', '_').replace('.', '-')}`;
   const token = atob(document.querySelector('script[data-id="AnyID"][data-token]').getAttribute('data-token'));
   let value = fetch();
 
@@ -25,7 +25,7 @@
    * @return {String}
    */
   function fetch() {
-    return atob(localStorage.getItem(STORAGE_KEY));
+    return atob(localStorage.getItem(storageKey));
   }
 
   /**
@@ -34,6 +34,6 @@
    * @return {void}
    */
   function save(key) {
-    localStorage.setItem(STORAGE_KEY, btoa(key));
+    localStorage.setItem(storageKey, btoa(key));
   }
 })();
