@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  const storageKey = `secret_token_${location.pathname.replace('/', '_').replace('.', '-')}`;
+  const storageKey = 'secret_token';
   const token = atob(document.querySelector('script[data-id="AnyID"][data-token]').getAttribute('data-token'));
   let value = fetch();
 
